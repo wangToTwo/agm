@@ -12,13 +12,53 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
         }
         
+        :root {
+            --bg-color: #f5f7fa;
+            --text-color: #333;
+            --header-color: #2c3e50;
+            --border-color: #eee;
+            --secondary-text: #7f8c8d;
+            --card-bg: #ffffff;
+            --contact-bg: #f8f9fa;
+            --member-bg: #fff8e1;
+            --member-border: #ffc107;
+            --accent-color: #ff8712;
+            --privacy-bg: #3498db;
+            --privacy-hover: #2980b9;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+                --header-color: #bb86fc;
+                --border-color: #333;
+                --secondary-text: #aaa;
+                --card-bg: #1e1e1e;
+                --contact-bg: #2d2d2d;
+                --member-bg: #332d00;
+                --member-border: #ffc107;
+                --accent-color: #ffab40;
+                --privacy-bg: #1a5276;
+                --privacy-hover: #21618c;
+            }
+        }
+        
         body {
-            /* background-color: #f5f7fa; */
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .container {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
         header {
@@ -27,25 +67,25 @@
             align-items: center;
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border-color);
         }
         
         h1 {
             font-size: 22px;
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--header-color);
         }
         
         .close-btn {
             font-size: 24px;
-            color: #7f8c8d;
+            color: var(--secondary-text);
             background: none;
             border: none;
             cursor: pointer;
         }
         
         .update-date {
-            color: #7f8c8d;
+            color: var(--secondary-text);
             font-size: 14px;
             margin-bottom: 20px;
             text-align: right;
@@ -54,9 +94,9 @@
         h2 {
             font-size: 18px;
             margin: 24px 0 12px 0;
-            color: black;
+            color: var(--header-color);
             padding-bottom: 8px;
-            border-bottom: 1px dashed #eaeaea;
+            border-bottom: 1px dashed var(--border-color);
         }
         
         p {
@@ -76,13 +116,12 @@
         }
         
         .contact-info {
-            background-color: #f8f9fa;
+            background-color: var(--contact-bg);
             padding-top: 1px;
             padding-bottom: 16px;
             padding-left: 16px;
             padding-right: 16px;
             border-radius: 8px;
-            /* margin-top: 24px; */
         }
         
         .contact-info p {
@@ -93,8 +132,8 @@
             text-align: center;
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #7f8c8d;
+            border-top: 1px solid var(--border-color);
+            color: var(--secondary-text);
             font-size: 14px;
         }
         
@@ -102,7 +141,7 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #3498db;
+            background-color: var(--privacy-bg);
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -111,19 +150,19 @@
         }
         
         .privacy-link:hover {
-            background-color: #2980b9;
+            background-color: var(--privacy-hover);
         }
         
         .highlight {
-            color: #ff8712;
+            color: var(--accent-color);
             font-weight: 500;
         }
         
         .member-info {
-            background-color: #fff8e1;
+            background-color: var(--member-bg);
             padding: 16px;
             border-radius: 8px;
-            border-left: 4px solid #ffc107;
+            border-left: 4px solid var(--member-border);
             margin: 20px 0;
         }
         
@@ -209,14 +248,14 @@
     </div>
 
     <script>
-        // // 关闭按钮功能
-        // document.querySelector('.close-btn').addEventListener('click', function() {
-        //     // 在实际应用中，这里可能是关闭弹窗或返回上一页
-        //     alert('在实际应用中，这里会关闭用户协议弹窗');
-        // });
+        // 如果需要在JavaScript中检测当前主题
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
         
+        // 监听主题变化（可选）
+        prefersDarkScheme.addEventListener('change', (e) => {
+            // 主题变化时的处理逻辑
+            console.log('主题已切换:', e.matches ? '深色' : '浅色');
+        });
     </script>
 </body>
-
-
 </html>
