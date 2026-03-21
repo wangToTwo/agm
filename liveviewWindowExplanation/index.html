@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>功能调整说明 | FAST快捷指令</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5f7;  /* 浅灰背景 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: #1c1c1e;  /* 深灰文字 */
+            padding: 24px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 32px 28px;
+        }
+
+        /* 标题区域 */
+        .title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #000000;
+            margin-bottom: 20px;
+            border-left: 4px solid #3a3a3c;
+            padding-left: 16px;
+        }
+
+        /* 正文 */
+        .content {
+            font-size: 1rem;
+            color: #2c2c2e;
+            margin-bottom: 28px;
+        }
+
+        .content p {
+            margin-bottom: 1.2em;
+        }
+
+        /* 高亮提示 */
+        .highlight {
+            background-color: #f2f2f2;
+            padding: 14px 16px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border-left: 3px solid #8e8e93;
+            color: #1d1d1f;
+        }
+
+        /* 按钮容器 */
+        .button-wrapper {
+            margin-top: 28px;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: #1c1c1e;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 14px 28px;
+            border-radius: 44px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-btn:hover {
+            background-color: #3a3a3c;
+            transform: scale(0.98);
+        }
+
+        /* 辅助信息 */
+        .footer-note {
+            margin-top: 32px;
+            font-size: 0.75rem;
+            color: #8e8e93;
+            text-align: center;
+            border-top: 1px solid #e5e5ea;
+            padding-top: 20px;
+        }
+
+        /* 适配小屏幕 */
+        @media (max-width: 480px) {
+            body {
+                padding: 16px;
+            }
+            .container {
+                padding: 24px 20px;
+            }
+            .title {
+                font-size: 1.5rem;
+                padding-left: 12px;
+            }
+            .contact-btn {
+                width: 100%;
+                padding: 14px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="title">
+        ⚠️ 实况窗功能调整说明
+    </div>
+    <div class="content">
+        <p>尊敬的用户，您好：</p>
+        <p>很抱歉地通知您，受限于华为实况窗平台当前开放场景规则，我们创新推出的“<strong>AI取餐码一键上岛</strong>”功能将无法继续通过实况窗提供服务。</p>
+        <p>该功能在 iOS 平台已稳定运行半年以上，且完全由您主动点击发起，旨在帮助您更便捷地查看取餐进度。但在鸿蒙版本中，华为实况窗团队以“场景不符”为由，<strong>强制要求我们移除该功能</strong>，且未给予合理的缓冲期限。尽管我们反复沟通、提交详细场景说明，最终仍未获得接入许可。</p>
+        <div class="highlight">
+            📢 我们认为，这一限制直接影响您的使用体验，也违背了“用户主动操作不应被一刀切限制”的基本逻辑。作为开发者，我们无法独自改变平台规则，但您的真实反馈至关重要。
+        </div>
+        <p>如果您也希望实况窗能够支持更多实用的、用户主动触发的场景，<strong>恳请您花一分钟时间向华为官方反馈意见</strong>。只有足够多的用户声音，才能推动平台优化规则，让优秀的功能回归。</p>
+        <p>我们依然在努力探索其他替代方案，但目前实况窗相关权益已被回收，本页即为替代跳转页面。给您带来不便，我们深表歉意，并感谢您一直以来的支持。</p>
+    </div>
+
+    <div class="button-wrapper">
+        <a href="tel:950800" class="contact-btn">📞 联系华为客服 · 反馈诉求</a>
+    </div>
+    <div class="footer-note">
+        点击即可拨打华为消费者热线 950800<br>
+        建议您向客服说明：“希望实况窗开放更多用户主动触发的场景，例如AI取餐码实时进度，现有规则限制不合理。”<br>
+        您的每一次反馈，都是改善体验的力量。
+    </div>
+</div>
+</body>
+</html>
